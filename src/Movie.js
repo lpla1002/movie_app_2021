@@ -2,6 +2,14 @@ import React from "react";
 import propTypes from "prop-types";
 import "./Movie.css";
 
+function Component(e) {
+  if ( e.length > 280 ) {
+    return <span>{e.slice(0, 280)}...</span>;
+  } else {
+    return <span>{e}</span>;
+  }
+} 
+
 function Movie({ id, year, title, summary, poster, genres }) {
   return (
     <div className="movie_list">
@@ -11,8 +19,8 @@ function Movie({ id, year, title, summary, poster, genres }) {
       <div className="movie_contents">
         <h3 className="movie_title">{title}</h3>
         <h5 className="movie_year">{year}</h5>
-        <ul className="movie_genres">{genres.map((genres, index) => <li key={index} className="genres_list">- {genres} </li>)}</ul>
-        <p className="movie_summary">{summary}</p>
+        <ul className="movie_genres">{genres.map((genres, index) => <li key={index} className="genres_list"> {genres} </li>)}</ul>
+        <p className="movie_summary">{Component(summary)}</p>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ class App extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+    } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=like_count");
     this.setState({ movies, isLoading: false });
   };
   componentDidMount() {
@@ -25,7 +25,7 @@ class App extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
-            <span className="loader_text">"로딩중..."</span>
+            <span className="loader_text">로딩중...</span>
           </div>
         ) : (
           <div className="movies_container">
