@@ -1,0 +1,7 @@
+body { background: #111; }
+h3, h5, p, ul, li { color: #fff; margin: 0; padding: 0; }
+ul, li { list-style: none; }
+.loader_text { color: #fff; }
+.movie_list { margin-bottom: 6rem; display: flex; }
+.movie_poster { margin-right: 1rem; }
+.movie_summary { margin-top: 2rem; }
