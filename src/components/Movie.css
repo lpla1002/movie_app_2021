@@ -169,3 +169,6 @@ ul, li { list-style: none; }
 .movie_genres .genres_list { display: table-cell; font-size: 1.4rem; color: #b1b1b1; }
 .movie_genres .genres_list:not(:last-child) { border-right-width: .5rem; border-color: transparent; }
 .movie_summary { font-size: 1.4rem; color: #b1b1b1; margin-top: 2rem; line-height: 2rem; } 
+
+.nav_con { font-size: 3rem; text-align: center; }
+.nav_con a { margin: 2rem; }
